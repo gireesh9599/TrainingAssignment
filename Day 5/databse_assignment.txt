@@ -16,4 +16,4 @@ sql : select name, max(salary) as second_max from employee where
   salary < (select max(salary) from employee); 
 
 6)show the all employee names except tester.
-sql : select name from employee where name!='tester';
+sql : select name from employee where dept!='tester';
