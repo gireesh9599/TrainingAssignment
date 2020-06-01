@@ -1,0 +1,80 @@
+/*-----------------QUERIES----------------------*/
+
+
+01. Display distinct Employee id, Employee name who 
+	kept the item issued for more than a year.
+
+sql : select distinct employee_master.employee_id,employee_name from employee_master 
+	inner join 
+	employee_issue_details on employee_master.employee_id = employee_issue_details.employee_id where
+ 	datediff(return_date,issue_date)>365;
+
+
+02. Count number of customers who have gone for loan type Stationary. 
+
+sql : select count(loan_id) from loan_card_master where loan_type='Stationary';
+
+
+03. Display Category and number of item in that category.
+
+sql: select item_category,count(item_id) as Number_Of_Item from item_master group by item_category;
+
+
+04. Empid ,Emp Name who joined the company after 2005.
+sql :  select employee_id,employee_name from employee_master where year(date_of_joining)>2005;
+
+
+05. Count gender and group by gender.
+
+sql: select gender,count(gender) from employee_master group by gender ;
+
+
+06.Display count of employees who have recieved loan.
+
+sql : select count(employee_id) from employee_card_details;
+
+
+07. Details of issue id,emp id,name who had issued in product display in 
+	sorted order of issue_id.
+
+sql : select issue_id, employee_master.employee_id,employee_master.employee_name from employee_master 
+	inner join 
+	employee_issue_details on employee_master.employee_id = employee_issue_details.employee_id order by issue_id;
+
+
+08. Display empid,name who has the highest valuation. if multiple records then display 
+in order of emp id 
+
+sql : select em.employee_id,em.employee_name from employe_master em inner join item_master im on em.employee_id=im.employee_id and im.item_valuation=(select max(item_valuation)from item master); 
+
+
+
+09. Display No. of emp in HR dept
+
+sql:select count(employee_id) from employee_master where department="hr";
+
+
+10. Display issue status  and number of items of furniture based on issued and not issued 
+sql : select item_id,issue_status from item_master where item_category="furniture";
+
+
+11. Display empid and total valuation of each employee where employee must have 
+at least one product issued
+
+sql : select distinct employee_id,sum(im.item_valuation) from employee_issue_details eid 
+	inner join item_master im on eid.item_id = im.item_id group by im.item_valuation;
+
+
+12. Display name of categories and no of items in each category and sort in order of
+ no of items.
+
+sql :select item_category,count(item_id) as number_of_item from item_master group by item_category order by number_of_item;
+
+
+13. Display empid,name with their total valuations.
+
+sql :select distinct em.employee_id,employee_name,sum(im.item_valuation) from employee_master em
+	inner join employee_issue_details eid on em.employee_id= eid.employee_id
+ 	inner join item_master im on eid.item_id = im.item_id group by im.item_valuation;
+  
+
