@@ -1,0 +1,7 @@
+1) find the value of b
+int a=7
+ i)int b=a++ - ++a - a++ + ++a -a--
+ans : 7-9-9+11-11 = -11
+
+ ii)int b=--a + a-- + ++a + a-- -++a 
+ans : 6+6+6+6-6 = 18
