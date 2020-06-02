@@ -5,7 +5,7 @@ public class StarPattern {
 	public static void main(String[] args) {
 		int length=5;
 		
-		for (int i=0; i<length; i++) //outer loop for number of rows(n) { for (int j=n-i; j>1; j--) //inner loop for spaces
+		for (int i=0; i<length; i++) //outer loop for number of rows
         { 
             
          
