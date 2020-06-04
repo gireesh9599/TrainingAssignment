@@ -1,0 +1,24 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+gireesh@gireesh-VirtualBox:~$ cd Desktop
+gireesh@gireesh-VirtualBox:~/Desktop$ ls -l ex.txt
+-rw-rw-r-- 1 gireesh gireesh 78 Jun  3 13:04 ex.txt
+gireesh@gireesh-VirtualBox:~/Desktop$ chmod u=rwx,g=r,o=r ex.txt
+gireesh@gireesh-VirtualBox:~/Desktop$ ls -l ex.txt
+-rwxr--r-- 1 gireesh gireesh 78 Jun  3 13:04 ex.txt
+gireesh@gireesh-VirtualBox:~/Desktop$ chmod u=rwx,g=rwx,o=r ex.txt
+gireesh@gireesh-VirtualBox:~/Desktop$ ls -l ex.txt
+-rwxrwxr-- 1 gireesh gireesh 78 Jun  3 13:04 ex.txt
+gireesh@gireesh-VirtualBox:~/Desktop$ chmod u=rwx , g=rwx , o=r ex.txt
+chmod: cannot access ',': No such file or directory
+chmod: cannot access 'g=rwx': No such file or directory
+chmod: cannot access ',': No such file or directory
+chmod: cannot access 'o=r': No such file or directory
+gireesh@gireesh-VirtualBox:~/Desktop$ chmod u=rwx,g=rwx,o=r ex.txt
+gireesh@gireesh-VirtualBox:~/Desktop$ ls -l ex.txt
+-rwxrwxr-- 1 gireesh gireesh 78 Jun  3 13:04 ex.txt
+gireesh@gireesh-VirtualBox:~/Desktop$ chmod u=rw,g=r,o=r ex.txt
+gireesh@gireesh-VirtualBox:~/Desktop$ ls -l ex.txt
+-rw-r--r-- 1 gireesh gireesh 78 Jun  3 13:04 ex.txt
+
