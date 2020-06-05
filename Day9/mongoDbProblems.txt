@@ -1,0 +1,108 @@
+					
+						            MongoDB Exercises
+
+
+1. Write a MongoDB query to display all the documents in the collection restaurants.
+ans :db.restaurants.find().pretty()
+
+
+2. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine 
+for all the documents in the collection restaurant.
+
+ans :db.restaurants.find({},{restaurant_id:1,name:1,borough:1,cuisine:1}).pretty()
+
+3. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine, 
+	but exclude the field _id for all the documents in the collection restaurant.
+
+ans :db.restaurants.find({},{_id:0,restaurant_id:1,name:1,borough:1,cuisine:1}).pretty()
+
+4. Write a MongoDB query to display the fields restaurant_id, name, borough and zip code, 
+	but exclude the field _id for all the documents in the collection restaurant.
+
+ans : db.restaurants.find({},{_id:0,restaurant_id:1,name:1,borough:1,'address.zipcode':1}).pretty()
+
+5. Write a MongoDB query to display all the restaurant which is in the borough Bronx.
+
+ans : db.restaurants.find({borough:"Bronx"}).pretty()
+
+6. Write a MongoDB query to display the first 5 restaurant which is in the borough Bronx.
+ans : db.restaurants.find({borough:"Bronx"}).limit(5).pretty()
+
+7. Write a MongoDB query to display the next 5 restaurants after skipping first 5 which 
+	are in the borough Bronx.
+ans : db.restaurants.find({borough:"Bronx"}).skip(5).limit(5).pretty()
+
+
+8. Write a MongoDB query to find the restaurants who achieved a score more than 90.
+
+ans : db.restaurants.find({"grades.0.score": {$gt:90}}).pretty()
+
+9. Write a MongoDB query to find the restaurants that achieved a score, more than 80 but
+	 less than 100.
+ ans : db.restaurants.find({"grades.0.score": {$gt:80,$lt:100}}).pretty()
+
+10. Write a MongoDB query to find the restaurants, which locate in latitude value
+	 less than -95.754168.
+ ans :  db.restaurants.find({"address.coord.0": {$lt:-95.754168}}).pretty()
+
+11. Write a MongoDB query to find the restaurants that do not prepare any cuisine of
+    'American' and their grade score more than 70 and latitude less than -65.754168.
+
+ans : db.restaurants.find({$and : [{"cuisine":{$ne:"American "},"grades.0.score": {$gt:70},"address.coord.0": {$lt:-65.754168}}]}).pretty()
+
+12. Write a MongoDB query to find the restaurants, which do not prepare any cuisine 
+	of 'American ' and achieved a grade point 'A' not belongs to the borough Brooklyn. 
+	The document must be displayed according to the cuisine in descending order.
+ans : db.restaurants.find({"cuisine":{$ne:"American "},"grades.0.grade":"A","borough":{$ne:"Brooklyn"}}).pretty()
+
+
+ 
+13. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants, 
+	which contain 'Wil' as first three letters for its name. 
+
+ans : db.restaurants.find({name:/^Wil/},{restaurant_id:1,name:1,borough:1,cuisine:1}).pretty()
+
+14. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants 
+	which achieved a score which is not more than 10.
+
+ans :  db.restaurants.find({"grades.0.score": {$lte:10}},{restaurant_id:1,name:1,borough:1,cuisine:1}).pretty()
+ 
+15. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants 
+	which prepared dish except 'American' and 'Chinees' or restaurant's name begins with letter 'Wil'. 
+
+ans : db.restaurants.find({$or: [{name: /^Wil/},{"$and": [{"cuisine": {$ne :"American "}},{"cuisine" : {$ne :"Chinese"}}]}]}
+	 ,{"restaurant_id" : 1,"name":1,"borough":1,"cuisine" :1} ).pretty()
+
+16. Write a MongoDB query to find the restaurant Id, name and grades for those restaurants where 
+	the 2nd element of grades array contains a grade of "A" and score 9 on an ISODate "2014-08-11T00:00:00Z". 
+ans : db.restaurants.find({$and: [{"grades.date" : ISODate("2014-08-16T00:00:00Z"),"grades.score":9,"grades.grade":"A"}]},{restaurant_id:1,name:1,"grades.grade":1}).pretty()
+	
+
+17. Write a MongoDB query to arrange the name of the restaurants in ascending order along with all the columns.
+ ans :  db.restaurants.find().sort({name:1}).pretty()
+
+18. Write a MongoDB query to know whether all the addresses contains the street or not. 
+ans : db.restaurants.find({"address.street" :{ $exists : true }}).pretty()
+
+19. Write a MongoDB query to find the restaurant name, borough, longitude and attitude 
+	and cuisine for those restaurants, which contains 'mon' as three letters somewhere in its name. 
+ans :  db.restaurants.find({name: /mon/},{name:1,borough:1,cuisine:1,"address.coord":1})
+
+20. Write a MongoDB query to find the restaurant name, borough, longitude and latitude 
+	and cuisine for those restaurants, which contain 'Mad' as first three letters of its name.
+ans : db.restaurants.find({name: /^Mad/},{name:1,borough:1,cuisine:1,"address.coord":1})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
