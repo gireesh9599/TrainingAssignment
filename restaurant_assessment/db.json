@@ -1,0 +1,101 @@
+{
+"users": [
+    {
+      "id": 1,
+      "name": "Piyush Sharma",
+      "email": "piyushsharma@gmail.com",
+      "password": "pwdvalue",
+      "role": "Buyer",
+      "Img": "http://localhost/eShopper/Project/images/person1.jpg",
+      "Village": "Rampur",
+      "District": "Raigarh",
+      "State": "Chhattisgarh",
+      "Pin": "496107"
+    },
+    {
+      "id": 2,
+      "name": "Prince Rai",
+      "email": "princerai@gmail.com",
+      "password": "pwdvalue",
+      "role": "Buyer",
+      "Img": "http://localhost/eShopper/Project/images/person1.jpg",
+      "Village": "Rampur",
+      "District": "Raigarh",
+      "State": "Chhattisgarh",
+      "Pin": "496107"
+    },
+    {
+      "id": 3,
+      "name": "Anna Smith",
+      "email": "annasmith23@gmail.com",
+      "password": "pwdvalue",
+      "role": "Buyer",
+      "Img": "http://localhost/eShopper/Project/images/person1.jpg",
+      "Village": "Rampur",
+      "District": "Raigarh",
+      "State": "Chhattisgarh",
+      "Pin": "496107"
+    },
+    {
+      "id": 4,
+      "name": "Robert Brown",
+      "email": "bobbrown432@yahoo.com",
+      "password": "pwdvalue",
+      "role": "Buyer",
+      "Img": "http://localhost/eShopper/Project/images/person1.jpg",
+      "Village": "Rampur",
+      "District": "Raigarh",
+      "State": "Chhattisgarh",
+      "Pin": "496107"
+    },
+    {
+      "id": "5",
+      "name": "gk",
+      "email": "gk@gmail.com",
+      "password": "pwdvalue",
+      "role": "Buyer",
+      "Img": "http://localhost/eShopper/Project/images/person1.jpg",
+      "Village": "Rampur",
+      "District": "Raigarh",
+      "State": "Chhattisgarh",
+      "Pin": "496107"
+    },
+    {
+      "id": 12,
+      "name": "mk1",
+      "email": "girish@gmail.com",
+      "password": "123",
+      "role": "Buyer",
+      "Img": "http://localhost/eShopper/Project/images/person1.jpg",
+      "Village": "Rampur",
+      "District": "Raigarh",
+      "State": "Chhattisgarh",
+      "Pin": "496107"
+    },
+    {
+      "id": 13,
+      "name": "new",
+      "email": "pk@gmail.com",
+      "password": "125",
+      "role": "Seller",
+      "Img": "http://localhost/eShopper/Project/images/person1.jpg",
+      "Village": "Rampur",
+      "District": "Raigarh",
+      "State": "Chhattisgarh",
+      "Pin": "496107"
+    },
+    {
+      "id": 14,
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "role": "Admin",
+      "Img": "http://localhost/eShopper/Project/images/person1.jpg",
+      "Village": "Rampur",
+      "District": "Raigarh",
+      "State": "Chhattisgarh",
+      "Pin": "496107"
+    }
+  ]
+
+}

@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="vender/bs/css/bootstrap.min.css">
+<script src="vender/jquery-3.3.1.min.js"></script>
+<script src="vender/popper.min.js"></script>
+<script src="vender/bs/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="vender/fa/css/font-awesome.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+
+      <link rel="stylesheet" href="style.css">
+
+
+<nav style="box-shadow: 2px 2px 2px #666666" class="navbar navbar-expand-md  bg-dark text-white">
+    <a style="font-size: 24px; font-weight: 600; color: yellow;  text-shadow: 2px 2px 2px black" class="navbar-brand" href="#">ABC<sup style="text-shadow: 0px 0px 0px; color: black; font-size:20px;">&reg;<sup></a>
+    <button class="navbar-toggler d-lg-none"  data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div style="font-size: 20px; font-weight: 500; " class="text-white collapse navbar-collapse " id="collapsibleNavId">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="location.html">Locations</a>
+            </li>
+           
+            <script>
+
+                      if(sessionStorage.getItem("user_role")!=null){
+                                document.write(' <li class="nav-item"> <a class="nav-link"  href="logout.html">Logout</a></li> ');
+                              }
+                              else{
+                                 document.write(' <li class="nav-item"><a class="nav-link" href="login.html">Login</a>');
+                      
+                              }
+                            </script>
+                      
+        </ul>
+       
+    </div>
+</nav>
+
+
+<main class="container-fluid">
+    <div class="row my-4">
+        <div class="col-sm-8 offset-sm-2">
+     
+         <h1 class="my-4">Register</h1>                 
+        <form id="myform" method="post">
+        <input required placeholder="Name" class="form-control"  type="text" name="name" /><br>
+        <input required placeholder="EMail" class="form-control"  type="email" name="email" /><br>
+        <input required placeholder="Password" class="form-control" type="password" name="pass" id="pass"/><br>
+        <input required placeholder="Confirm Password" class="form-control" type="password" name="cpass" id="cpass"/><br>
+        <input required placeholder="Contact No" pattern="0?[7-9]{1}\d{9}"  class="form-control" type="tel" name="phone_no" id="phone_no"/><br>
+        <input required  placeholder="Security Question" class="form-control" type="text" name="sec_q" id="sec_q"/></br>
+        <input required  placeholder="Security Answer" class="form-control"  type="text" name="sec_a" id="sec_a"/></br>
+
+        
+
+        
+        <button type="submit" class="btn btn-success btn-block">Submit</button>
+        <a class="btn btn-danger btn-block" href="register.html">Reset</a>
+        </form>
+        </div>
+        </div>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+
+   <link rel="stylesheet" href="vender/bs/css/bootstrap.min.css">
+   <script src="vender/jquery-3.3.1.min.js"></script>
+   <script src="vender/popper.min.js"></script>
+   <script src="vender/bs/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="vender/fa/css/font-awesome.min.css">
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+   
+         <link rel="stylesheet" href="style.css">
+   
+   
+   <nav style="box-shadow: 2px 2px 2px #666666" class="navbar navbar-expand-md  bg-dark text-white">
+       <a style="font-size: 24px; font-weight: 600; color: yellow;  text-shadow: 2px 2px 2px black" class="navbar-brand" href="#">ABC<sup style="text-shadow: 0px 0px 0px; color: black; font-size:20px;">&reg;<sup></a>
+       <button class="navbar-toggler d-lg-none"  data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+   
+       
+       <div style="font-size: 20px; font-weight: 500; " class="text-white collapse navbar-collapse " id="collapsibleNavId">
+           <ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
+               <li class="nav-item">
+                   <a class="nav-link" href="index.html">Home</a>
+               </li>
+               <li class="nav-item">
+                <a class="nav-link" href="menu.html">Menu</a>
+            </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="about.html">About</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="location.html">Locations</a>
+               </li>
+              
+               <script>
+   
+                         if(sessionStorage.getItem("user_role")!=null){
+                                   document.write(' <li class="nav-item"> <a class="nav-link"  href="logout.html">Logout</a></li> ');
+                                 }
+                                 else{
+                                   document.write(' <li class="nav-item"><a class="nav-link" href="login.html">Login</a>');
+                         
+                                 }
+                               </script>
+                         
+           </ul>
+          
+       </div>
+   </nav>
+   
+
+
+
+<br>
+
+<center>
+<h4>Explore ABC
+</h4><br><br>
+
+
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.373119846975!2d81.65264831493583!3d21.21704788589667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dcfc5b3a59f1%3A0xb5cb45b4c6d62df2!2sAshoka%20Biryani!5e0!3m2!1sen!2sin!4v1592896584314!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+
+</center>
+<br>    
+
+
+
+
+
+
+
+
+
+<footer id="footer" class="bg-dark text-white text-center">
+    <div class="row p-5">
+        <div class="col-sm-4">
+            <h5>Customer Service</h5>
+            <a href="#">Contact Us</a><br>
+            <a href="#">Track Order</a>
+        </div>
+        <div class="col-sm-4">
+            <h5 class="mb-3">Connect With Us</h5>
+            <a href="#"> <i class="fa fa-2x fa-facebook-square"></i></a>
+            <a href="#"> <i class="fa fa-2x fa-twitter-square mx-4"></i></a>
+            <a href="#"> <i class="fa fa-2x fa-instagram"></i></a>
+        </div>
+        <div class="col-sm-4">
+            <h5>Company</h5>
+            <a href="about.html">About Us</a><br>
+            <a href="#">Terms and condition</a>
+        </div>
+    </div>
+    <p style="border-bottom: 1px yellow solid" class="mx-5"></p>
+    <p class="pb-3">Copyright @ <a style="color: white;" href="index.html">ABC.com</a></p>
+    </footer>
+    
